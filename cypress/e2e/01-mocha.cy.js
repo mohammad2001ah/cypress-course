@@ -21,6 +21,40 @@
 
 //Login functionality
 describe("Login functionality",()=>{
+
+  /**
+   * tack one argument function
+   * run once before all test case in the describe block
+   * 
+   */
+  before(()=> {
+    cy.log("I'm Inside the Before Hook");
+  });
+
+  /**
+   *it will execute before all and every test case 
+   *if we have 5 test case it will execute 5 times
+   */
+  beforeEach(()=> {
+    cy.log("I'm Inside the Before Each Hook");
+  });
+
+  /**
+   * it will execute once after all test case in the describe block
+   */
+  after(()=> {
+    cy.log("I'm Inside the After Hook");
+  });
+
+  /**
+   *it will execute after all and every test case 
+   *if we have 5 test case it will execute 5 times
+   */
+  afterEach(()=> {
+    cy.log("I'm Inside the After Each Hook");
+  });
+
+
   it("Test Case #1: should login  with valid email and password correctly",function(){
     cy.log("should login  with valid email and password correctly");
   });

@@ -107,11 +107,15 @@ it("find the element using the siblings command",()=>{
 });
 
 //find element by text command
-it.only("find the element using the contains command",()=>{
+it("find the element using the contains command",()=>{
   cy.visit('cypress/index.html');
   //we find the elemnet using the text we use contains() command
   cy.contains("Appium");
   cy.get('li').contains("Cypress");
 });
 
-
+// find by using cypress selector playground
+it.only("find the element using the cypress selector playground from cypress runner",()=>{
+  cy.visit("cypress/index.html");
+  cy.get(".course-list > .list2");
+});
